@@ -1,5 +1,34 @@
 // Write your code here
+const products = ["Laptop", "Phone", "Headphones", "Monitor"];
 
+function logFirstProduct() {
+    console.log(products[0]);
+}
+
+function addProduct(productName) {
+    products.push(productName)
+}
+
+addProduct("Mouse");
+console.log(products);
+
+function updateProductName(index, newName) {
+    if (index >= 0 && index < products.length) {
+        products[index] = newName
+    } else {
+        console.log("Item not Recognized")
+    }
+}
+
+updateProductName(9, "Smartphone");
+console.log(products);
+
+function removeLastProduct() {
+    products.pop();
+}
+
+removeLastProduct();
+console.log(products);
 
 
 // Export the necessary parts for testing
